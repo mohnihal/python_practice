@@ -1,4 +1,4 @@
-# Definition for singly-linked list.
+"""The following code adds 2 linked list assuming each linkedlist holds values for its place eg ll - 1-2-3-4-5 = 54321"""
 class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
@@ -10,9 +10,8 @@ class Solution(object):
 
     def printResult(self,ll):
         while(ll):
-            print (ll.val)
+            print(ll.val, end='')
             ll = (ll.next)
-        # pass
 
     def addTwoNumbers(self, l1, l2):
         """
@@ -46,12 +45,9 @@ class Solution(object):
                 cur.next = ListNode()
             else:
                 cur.next = None
-            # print (cur.next)
             temp_sum = temp_sum//10
             cur = cur.next
             result_length-=1
-        # print (finalLL)
-        # print (finalLL.val,finalLL.next.val)
         self.printResult(finalLL)
         return finalLL
 
@@ -59,13 +55,13 @@ class Solution(object):
 
 
 
-Node1 = ListNode(9)
-Node2 = ListNode(9)
-Node3 = ListNode(9)
-Node4 = ListNode(9)
-Node5 = ListNode(9)
-Node6 = ListNode(9)
-Node7 = ListNode(9)
+Node1 = ListNode(0)
+Node2 = ListNode(0)
+Node3 = ListNode(0)
+Node4 = ListNode(0)
+Node5 = ListNode(0)
+Node6 = ListNode(0)
+Node7 = ListNode(1)
 
 Node8 = ListNode(9)
 Node9 = ListNode(9)
@@ -91,7 +87,7 @@ Node10.next = Node11
 # Node1.next = Node2
 # Node1.next = Node2
 sol = Solution()
-sol.addTwoNumbers(Node1,Node4)
+sol.addTwoNumbers(Node1,Node8)
 # resultLL = ListNode()
 # a = Solution() 
 # a.createSumLL(807//10,resultLL)
