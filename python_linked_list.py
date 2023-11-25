@@ -61,7 +61,7 @@ ll.push(4)
 ll.push(9)
 ll.push(5)
 
-ll.printLinkedList()
+# ll.printLinkedList()
 ll.deleteFromPosition(4)
 
 ll.printLinkedList()

@@ -104,17 +104,14 @@ def findMaxProfit(prices,k):
 
 
     profits = [[0 for d in prices] for t in range(k+1)]
-    # profits = [[0]*len(prices)]*(k+1)
     print (profits)
     for t in range(1,k+1):
         maxP = float("-inf")
-        print (maxP)
 
         for d in range(1,len(prices)):
-            print (profits[t-1][d-1]-prices[d-1],"diff")
             maxP = max(maxP,profits[t-1][d-1]-prices[d-1])
             profits[t][d] = max(profits[t][d-1],maxP+prices[d])
-            print ("profits",profits)
+
 
     return profits[-1][-1]
 

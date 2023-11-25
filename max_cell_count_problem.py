@@ -1,4 +1,4 @@
-'''Maximum cell count problem'''
+'''Program to find maximum number of connnected 1's in the grid - even diagonal 1s are counted'''
 def cellCounter(grid,row,col):
     if any([col<0,row<0,row>=len(grid),col>=len(grid[0])]):
         return 0

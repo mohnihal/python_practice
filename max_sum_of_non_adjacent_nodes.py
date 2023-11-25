@@ -1,4 +1,4 @@
-'''find max sum of adjacent nodes'''
+'''find max sum of non adjacent nodes'''
 class Node:
     def __init__(self,data):
         self.left=None
@@ -10,15 +10,13 @@ class BinaryTree:
     def __init__(self):
         pass
 
-    def sumOfGrandChildren(self,root,mp):
+    def sumOfGrandChildren(self, root, mp):
         sum=0
         if root.left:
             sum+=(self.maxPathSumUtil(root.left.left,mp)+self.maxPathSumUtil(root.left.right,mp))
         if root.right:
             sum+=(self.maxPathSumUtil(root.right.left,mp)+self.maxPathSumUtil(root.right.right,mp))
         
-        # print ("data= ",root.data)
-        # print ("sum=",sum)
         return sum
 
     def maxPathSumUtil(self,root,mp):
@@ -29,12 +27,12 @@ class BinaryTree:
             return mp[root]
 
         incl = (root.data+self.sumOfGrandChildren(root,mp))
-        excl = (self.maxPathSumUtil(root.left,mp)+self.maxPathSumUtil(root.right,mp))
+        excl = (self.maxPathSumUtil(root.left, mp)+self.maxPathSumUtil(root.right, mp))
 
         mp[root] = max(incl,excl)
         return mp[root]
 
-    def maxPathSum(self,root):
+    def maxPathSum(self, root):
         if root is None:
             return root
 
@@ -45,11 +43,11 @@ class BinaryTree:
 
 if __name__=="__main__":
      
-    root = Node(1);
-    root.left = Node(2);
-    root.right = Node(3);
-    root.right.left = Node(4);
-    root.right.right = Node(5);
-    root.left.left = Node(1);
+    root = Node(1)
+    root.left = Node(2)
+    root.right = Node(3)
+    root.right.left = Node(4)
+    root.right.right = Node(5)
+    root.left.left = Node(1)
     BT = BinaryTree()
     print(BT.maxPathSum(root))

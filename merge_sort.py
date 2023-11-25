@@ -1,11 +1,11 @@
 '''Merge Sort'''
 
 def Merge(ls,rs):
-    print(ls,rs)
-    left_sorted_index = right_sorted_index=0
-    left_sorted_len,right_sorted_len = len(ls),len(rs)
+    # print(ls,rs)
+    left_sorted_index = right_sorted_index = 0
+    left_sorted_len, right_sorted_len = len(ls), len(rs)
     new_sorted_list = []
-    for i in range(left_sorted_len+right_sorted_len):
+    for i in range(left_sorted_len + right_sorted_len):
         if left_sorted_index < left_sorted_len and right_sorted_index< right_sorted_len:
             if ls[left_sorted_index] <= rs[right_sorted_index]:
                 new_sorted_list.append(ls[left_sorted_index])
