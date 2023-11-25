@@ -77,4 +77,4 @@ def getMinMoves(plates):
 
 
 if __name__ == '__main__':
-    getMinMoves([2,4,1,3,6])
+    getMinMoves([2,4,1,9,3,6])

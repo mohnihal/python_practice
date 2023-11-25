@@ -3,15 +3,12 @@ from collections import defaultdict
 class Graph:
     def __init__(self,V):
         self.graph = defaultdict(list)
-        pass
-    def addEdge(self,edge1,edge2):
-        self.graph[edge1].append(edge2)
 
     def DFS(self,v,visited):
         visited[v] = True
         for i in self.graph[v]:
             if not visited[i]:
-                self.DFS(i,visited)
+                self.DFS(i, visited)
             
 
     def isConnected(self):

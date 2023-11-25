@@ -2,7 +2,7 @@
 
 
 def InsertionSort(nums):
-    for i in range(0,len(nums)-1):
+    for i in range(0, len(nums)-1):
         value_to_insert  = nums[i]
         j = i-1
 
@@ -11,3 +11,6 @@ def InsertionSort(nums):
             j-=1
         
         nums[j+1] = value_to_insert
+    return nums
+
+print(InsertionSort([1,5,3,9,12,7,0,6]))

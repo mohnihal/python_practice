@@ -61,8 +61,7 @@ root.right.right = Node(2)
 root.left.left = Node(8)
 root.left.right = Node(-4)
   
-print( "Following are the nodes on the maximum sum path ");
+print("Following are the nodes on the maximum sum path ")
 BT = BinaryTree()
 sum = BT.maxSumCalculate(root)
 print( "\nSum of the nodes is " , sum)  
-# This code is contributed by Arnab Kundu

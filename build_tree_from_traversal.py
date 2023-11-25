@@ -33,7 +33,6 @@ class buildTree:
             if inOrder[i]==root:
                 return i
                 
-
     def printInorder(self,node):
         if node is None:
             return

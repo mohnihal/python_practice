@@ -1,6 +1,4 @@
-from cgitb import reset
-from unittest import result
-
+"""Program to implement pow functionality."""
 
 class Solution(object):
     def myPow(self, x, n):

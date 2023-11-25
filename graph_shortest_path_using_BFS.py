@@ -8,7 +8,7 @@ def buildGraphFromMatrix(graph_matrix):
     return graph
 
 
-def findShortestPath(graph,start,goal):
+def findShortestPath(graph, start, goal):
     queue = [[start]]
     explored = []
     while queue:
@@ -18,11 +18,10 @@ def findShortestPath(graph,start,goal):
             for neighbor in graph[node]:
                 new_path = list(path)
                 new_path.append(neighbor)
-                # print ("new_path",new_path)
                 queue.append(new_path)
 
                 if neighbor==goal:
-                    print ("shortest path from ",goal," is ",new_path)
+                    print (f"shortest path from {goal} is {new_path}")
                     return 
             
             explored.append(node)

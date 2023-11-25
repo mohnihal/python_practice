@@ -1,11 +1,11 @@
 '''Inorder Traversal Using stack'''
 class Node:
-    def __init__(self,data):
+    def __init__(self, data):
         self.left=None
         self.right=None
         self.data = data
     
-    def inOrderTraversal(self,root):
+    def inOrderTraversal(self, root):
         stack = []
         current = root
         while(True):

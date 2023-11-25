@@ -30,28 +30,30 @@ class Node:
         if self.right:
             self.right.PrintTree()
 
-
-    def inOrderTraversal(self,root):
+    @staticmethod
+    def inOrderTraversal(root):
         res = []
         if root:
-            res += root.inOrderTraversal(root.left)
+            res += Node.inOrderTraversal(root.left)
             res.append(root.data)
-            res += root.inOrderTraversal(root.right)
+            res += Node.inOrderTraversal(root.right)
         return res
 
-    def preOrderTraversal(self,root):
+    @staticmethod
+    def preOrderTraversal(root):
         res = []
         if root:
             res.append(root.data)
-            res += root.preOrderTraversal(root.left)
-            res += root.preOrderTraversal(root.right)
+            res += Node.preOrderTraversal(root.left)
+            res += Node.preOrderTraversal(root.right)
         return res
 
-    def postOrderTraversal(self,root):
+    @staticmethod
+    def postOrderTraversal(root):
         res = []
         if root:
-            res += root.postOrderTraversal(root.left)
-            res += root.postOrderTraversal(root.right)
+            res += Node.postOrderTraversal(root.left)
+            res += Node.postOrderTraversal(root.right)
             res.append(root.data)
         return res
 
